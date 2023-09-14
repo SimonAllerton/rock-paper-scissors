@@ -34,13 +34,9 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
- // Prompts user to input a selection
- 
- 
-// Runs the playRound Function
-//playRound(playerSelection, computerSelection);
 
-
+// !! This function NEEDS to track the score 
+// and declare a winner and looser at the end of the game.
 
 function game(){
     for (let i = 0; i < 5; i++) {
