@@ -13,9 +13,13 @@ function getComputerChoice() {
     }
 }
 
-function playRound() {
-    // evaluates a tie
-    if (playerSelection == computerSelection) {
+// Runs getComputerChoice function
+let computerSelection = getComputerChoice();
+console.log(computerSelection);
+
+
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection === computerSelection) {
         console.log('You tied!')
     }   else if ((playerSelection == 'rock' && computerSelection == 'scissors') ||
                 (playerSelection == 'paper' && computerSelection == 'rock') ||
@@ -26,10 +30,9 @@ function playRound() {
         }
 }
 
-// Runs getComputerChoice function
-let computerSelection = getComputerChoice();
-console.log(computerSelection);
-
 // Prompts user to input a selection
 let playerSelection = prompt('Choose rock, paper, or scissors: ')
 console.log(playerSelection);
+
+// Runs the playRound Function
+playRound(playerSelection, computerSelection);
