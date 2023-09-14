@@ -15,11 +15,12 @@ function getComputerChoice() {
 
 // Runs getComputerChoice function
 let computerSelection = getComputerChoice();
-
+//console.log(computerSelection);
 
 function playRound(playerSelection, computerSelection) {
+    // if statement that evaluates your choice and the computer's choice
     if (playerSelection == ''){
-        console.log('Wow there buddy! You need to enter a valid selection')
+        console.log('Wow there buddy! You need to enter a valid selection.')
     } else if (playerSelection != 'rock' && playerSelection != 'paper' && playerSelection != 'scissors') {
         console.log(`Seriously?! ${playerSelection} is not rock, paper, or scissors.`)
     } else if (playerSelection === computerSelection) {
@@ -33,9 +34,24 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-// Prompts user to input a selection
-let input = prompt('Choose rock, paper, or scissors: ')
-let playerSelection = input.toLowerCase(); // Makes user input case sensitive
-
+ // Prompts user to input a selection
+ 
+ 
 // Runs the playRound Function
-playRound(playerSelection, computerSelection);
+//playRound(playerSelection, computerSelection);
+
+
+
+function game(){
+    for (let i = 0; i < 5; i++) {
+        let input = prompt('Choose rock, paper, or scissors: ');
+        let playerSelection = input.toLowerCase(); // Makes user input case sensitive
+
+        playRound(playerSelection, computerSelection);
+        if (i === 5){
+            break;
+        }
+    }
+};
+
+game();
