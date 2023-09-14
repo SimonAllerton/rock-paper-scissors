@@ -15,24 +15,22 @@ function getComputerChoice() {
 
 // Runs getComputerChoice function
 let computerSelection = getComputerChoice();
-console.log(computerSelection);
 
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
-        console.log('You tied!')
+        console.log(`You tied! You both played ${playerSelection}.`)
     }   else if ((playerSelection == 'rock' && computerSelection == 'scissors') ||
                 (playerSelection == 'paper' && computerSelection == 'rock') ||
                 (playerSelection == 'scissors' && computerSelection == 'paper')) {
-        console.log('You Win!')
+        console.log(`You Win! ${playerSelection} beats ${computerSelection}.`)
         } else {
-            console.log('You Lost!')
+            console.log(`You Lost! ${computerSelection} beats ${playerSelection}.`)
         }
 }
 
 // Prompts user to input a selection
 let playerSelection = prompt('Choose rock, paper, or scissors: ')
-console.log(playerSelection);
 
 // Runs the playRound Function
 playRound(playerSelection, computerSelection);
