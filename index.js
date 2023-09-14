@@ -13,7 +13,12 @@ function getComputerChoice() {
     }
 }
 
+
+
 // Runs getComputerChoice function
 let computerSelection = getComputerChoice();
 console.log(computerSelection);
 
+// Prompts user to input a selection
+let playerSelection = prompt('Choose rock, paper, or scissors: ')
+console.log(playerSelection);
