@@ -13,7 +13,18 @@ function getComputerChoice() {
     }
 }
 
-
+function playRound() {
+    // evaluates a tie
+    if (playerSelection == computerSelection) {
+        console.log('You tied!')
+    }   else if ((playerSelection == 'rock' && computerSelection == 'scissors') ||
+                (playerSelection == 'paper' && computerSelection == 'rock') ||
+                (playerSelection == 'scissors' && computerSelection == 'paper')) {
+        console.log('You Win!')
+        } else {
+            console.log('You Lost!')
+        }
+}
 
 // Runs getComputerChoice function
 let computerSelection = getComputerChoice();
