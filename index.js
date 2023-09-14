@@ -30,7 +30,8 @@ function playRound(playerSelection, computerSelection) {
 }
 
 // Prompts user to input a selection
-let playerSelection = prompt('Choose rock, paper, or scissors: ')
+let input = prompt('Choose rock, paper, or scissors: ')
+let playerSelection = input.toLowerCase(); // Makes user input case sensitive
 
 // Runs the playRound Function
 playRound(playerSelection, computerSelection);
