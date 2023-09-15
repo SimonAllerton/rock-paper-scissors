@@ -56,20 +56,20 @@ function game(){
         console.log(`Player Score = ${playerScore}`);
         console.log(`Computer Score = ${computerScore}`);
 
-        if (i === 5){
-            break;
-        }
-       if (playerScore > computerScore) {
-            console.log('You Won!')
-            return 1;
-        } else {
-            console.log('You Lost!')
-            return 0;
-        }
+         if (i === 4) {
+                winnerValidation();
+            } 
     }
 };
 
+function winnerValidation() {
+    if (playerScore > computerScore) {
+        console.log('You Won!')
+        return 1;
+    } else {
+        console.log('You Lost!')
+        return 0;
+    }
+}
+
 game();
-
-
-
