@@ -18,7 +18,6 @@ function getComputerChoice() {
 
 // Runs getComputerChoice function
 let computerSelection = getComputerChoice();
-//console.log(computerSelection);
 
 function playRound(playerSelection, computerSelection) {
     // if statement that evaluates your choice and the computer's choice
@@ -43,9 +42,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 
-// !! This function NEEDS to track the score 
-// and declare a winner and looser at the end of the game.
-
+// This is the game loop
 function game(){
     for (let i = 0; i < 5; i++) {
         let input = prompt('Choose rock, paper, or scissors: ');
@@ -62,6 +59,7 @@ function game(){
     }
 };
 
+// Checks to see who has the higher score and returns who wins
 function winnerValidation() {
     if (playerScore > computerScore) {
         console.log('You Won!')
